@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="212dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_image" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/back_icon"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:backgroundTint="#FFFFFF"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/arrow_back_icon"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/spacegrotesk_bold"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.802" />
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableStart="@drawable/person_icon"
+        android:drawableTint="@color/black"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:layout_marginTop="20dp"
+        android:hint="Your Name"
+        android:textColorHint="@color/edit_text_black"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/edit_text_bg"
+        android:drawableStart="@drawable/email_icon"
+        android:drawableTint="@color/black"
+        android:drawablePadding="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:textColorHint="@color/edit_text_black"
+        android:hint="Email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/name_edit_text"
+        app:layout_constraintVertical_bias="0.018"
+ />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/number_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/edit_text_bg"
+        android:paddingLeft="92dp"
+        android:singleLine="true"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="18sp"
+        android:inputType="number"
+        android:hint="Enter Mobile Number"
+        android:textColorHint="@color/edit_text_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/email_edit_text"
+        app:layout_constraintVertical_bias="0.018"
+        />
+
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/countyCodePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        app:ccp_showNameCode="false"
+        app:ccp_arrowColor="@color/black"
+        app:ccp_showPhoneCode="false"
+        app:layout_constraintBottom_toBottomOf="@+id/number_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/number_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/number_edit_text" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:hintTextColor="@color/edit_text_black"
+        app:hintEnabled="false"
+        app:endIconTint="@color/edit_text_black"
+        app:endIconMode="password_toggle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/number_edit_text"
+        app:layout_constraintVertical_bias="0.018"
+        app:startIconDrawable="@drawable/lock_icon"
+        android:drawableTint="@color/black"
+        app:startIconTint="@color/black">
+
+
+        <!--this is the actual edit text which takes the input-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/edit_text_bg"
+            android:fontFamily="@font/lato_regular"
+            android:singleLine="true"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signUp_btn"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/auth_outline_btn"
+        android:backgroundTint="@color/btn_color"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintVertical_bias="0.118">
+
+
+    </com.google.android.material.button.MaterialButton>
+
+
+
+    <LinearLayout
+        android:id="@+id/divider_line"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/signUp_btn"
+        app:layout_constraintVertical_bias="0.090">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:background="@color/Gray94" />
+
+        <TextView
+            android:id="@+id/txLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="or conuinue with"
+            android:textColor="#8C8B8B"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:background="@color/Gray94" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/auth_line"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/divider_line"
+        app:layout_constraintVertical_bias="0.090">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"/>
+
+        <LinearLayout
+            android:id="@+id/facebook_btn"
+            android:layout_width="42dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/auth_outline_btn"
+            android:gravity="center"
+            app:backgroundTint="@null"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:gravity="center"
+                android:layout_margin="12dp"
+                android:background="@drawable/facebook"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/google_btn"
+            android:layout_width="42dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/auth_outline_btn"
+            android:gravity="center"
+            app:backgroundTint="@null"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:gravity="center"
+                android:layout_margin="12dp"
+                android:background="@drawable/google"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/apple_btn"
+            android:layout_width="42dp"
+            android:layout_height="62dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/auth_outline_btn"
+            android:gravity="center"
+            app:backgroundTint="@null"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:gravity="center"
+                android:layout_margin="12dp"
+                android:background="@drawable/apple_icon"/>
+
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="@id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="end"
+            android:text="Already have an account?"
+            android:textColor="#727273"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sign_up"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/sign_up" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
+            android:text="Sign In"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            tools:layout_editor_absoluteY="654dp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
