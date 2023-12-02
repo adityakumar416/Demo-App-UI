@@ -147,6 +147,7 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="22dp"
             android:layout_height="22dp"
+            android:id="@+id/apple_icon"
             android:gravity="center"
             android:layout_margin="12dp"
             android:background="@drawable/apple_icon"/>

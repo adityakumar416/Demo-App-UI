@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        NightModeUtils.updateIconBasedOnMode(binding.appleIcon)
+
         binding.signInWithPassword.setOnClickListener {
             val intent = Intent(this,SignInActivity::class.java)
             startActivity(intent)

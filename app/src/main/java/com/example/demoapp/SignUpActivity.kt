@@ -20,6 +20,7 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        NightModeUtils.updateIconBasedOnMode(binding.appleIcon)
 
         binding.signUpBtn.setOnClickListener {
             val intent = Intent(this, NotificationActivity::class.java)
